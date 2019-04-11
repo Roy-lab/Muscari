@@ -1,0 +1,10 @@
+ppa	left	Anc1
+Anc2	right	Anc1
+Anc5	left	Anc2
+Anc3	right	Anc2
+osa	left	Anc5
+zma	right	Anc5
+stu	left	Anc3
+Anc4	right	Anc3
+mtr	left	Anc4
+ath	right	Anc4

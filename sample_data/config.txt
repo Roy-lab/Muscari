@@ -1,0 +1,6 @@
+ath	ath.eigvecs.matrix.txt
+mtr	mtr.eigvecs.matrix.txt
+osa	osa.eigvecs.matrix.txt
+ppa	ppa.eigvecs.matrix.txt
+stu	stu.eigvecs.matrix.txt
+zma	zma.eigvecs.matrix.txt
