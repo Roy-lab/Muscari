@@ -13,16 +13,16 @@ You can also find the example files for each requirement at **sample_data** dire
 
 * **Requirement 1: Species tree (text file)** <br>
 Species tree should be prepared as a text file consist of 3 columns (tab delimited). Each row is explaining the relationship of a parent node and a child node. *e.g.*, if species "**osa**" and "**zma**" are 2 children of ancestral node "**Anc5**", this relationship could be expressed as like below:
-```
-osa (TAB) left (TAB) Anc5
-zma (TAB) rigth (TAB) Anc5
-```
-&nbsp;&nbsp;One parental node always have 2 children nodes (left and right). The left/right children nodes will be dealt as equivalent, i.e. there is no order between children nodes. An ancestral node could be a child of another superordinate ancestral node. *e.g.*
-```
-stu (TAB) left (TAB) Anc3
-Anc4 (TAB) right (TAB) Anc3
-```
-Refer to this file: **sample_data/SpeciesTree.txt**
+> ```
+> osa (TAB) left (TAB) Anc5
+> zma (TAB) rigth (TAB) Anc5
+> ```
+> One parental node always have 2 children nodes (left and right). The left/right children nodes will be dealt as equivalent, i.e. there is no order between children nodes. An ancestral node could be a child of another superordinate ancestral node. *e.g.*
+> ```
+> stu (TAB) left (TAB) Anc3
+> Anc4 (TAB) right (TAB) Anc3
+> ```
+> Refer to this file: **sample_data/SpeciesTree.txt**
 <br><br>
 
 * **Requirement 2: Species order file (text file)** <br>
