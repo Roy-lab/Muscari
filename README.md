@@ -51,3 +51,18 @@ You can also find the example files for each requirement at **sample_data** dire
 > ```
 > Refer to this file: **sample_data/sample_OGID.txt**
 <br><br>
+
+* **Requirement 4: Value matrices (text files)** 
+> The expression value matrix for each extant node (species) should be prepared separately as a **tab delimited** text files. 
+>- First row of the file should be header for the following columns.
+>- First column should be gene IDs, which would corresponds to the gene IDs used in orthogroup file (requirement 3).
+>- Values of this matrix would be normalized gene expression values.
+>```
+> Gene	  SRX1795751	SRX1796285	SRX2035609	SRX2189162	SRX2484777 (...)
+> AT1G01900	-0.031721	0.031721	-0.570001	0.238822	-0.130085 (...)
+> AT1G01940   0.071255	-0.071255	-0.090784	-0.39764	-0.166357 (...)
+> AT1G02180	-0.029421	0.029421	1.111816	-0.420548	-0.351622 (...)
+> AT1G03100	-0.017806	0.017806	0.062057	0.338907	-0.028584 (...)
+>```
+> Refer to this file: **sample_data/(species)_sample_matrix.txt**
+<br><br>
