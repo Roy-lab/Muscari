@@ -151,8 +151,8 @@ The following result files are containing the most relevant information of the r
 * **Output 1: [species]__speciesspecnames_clusterassign.txt (tab delimited)** 
 > These files contain the result of cluster assaignments with gene IDs, formatted as "gene ID (TAB) cluster ID".
 >```
-> ath_ARATH_speciesspecnames_clusterassign.txt
-> mtr_ARATH_speciesspecnames_clusterassign.txt
+> ath_speciesspecnames_clusterassign.txt
+> mtr_speciesspecnames_clusterassign.txt
 > (...)
 >```
 
