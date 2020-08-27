@@ -1,18 +1,13 @@
-function eigvecmat_calc(inputmat,genefile,k,outname)
+function eigvecmat_calc(inputmat,k,outname)
 % inputmat: expression compendia matrix (n gene X m experiments)
-% genefile: indices for genes (GeneName \t i)
 % k: number of cluster
 % outpref: prefix for output files
 
 disp (' - loading data / similarity matrix calculation')
 a=importdata(inputmat);
+genes=a.textdata(2:end,:);
 dmat = squareform(pdist(a.data));
 smat = exp(-(dmat).^2 ./ (2*(std2(dmat))^2));
-
-% ordered list of genes
-genedata = importdata(genefile);
-genes=genedata.textdata;
-geneIDs=genedata.data;
 
 % normalized Laplacian
 disp(' - calculating mean(D) added Laplacian');
