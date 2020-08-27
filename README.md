@@ -99,23 +99,27 @@ You can also find the example files for each requirement at **sample_data** dire
 
 > The run_muscari.sh script requires arguments below:
 >- **K**: The number of resultant modules
->- **P**: transition probability (starting default = 0.8)
->- **X**: fixed covariance value (starting default = 0.1)
+>- **P**: transition probability; starting default=0.8, trying 0.5, 0.2, ...
+>- **X**: fixed covariance value; starting default=0.1, trying 0.15, 0.2, ...
 >- **best species**: One of the species name which is most well-studied. The gene ID of this species will be represented instead of OGID if there is the gene in that orthogroup.
 >- **output dir name**: The name of the directory which the results will be in
- 
- 
-**Step3-1. Preparation of eigenvector matrices (MATLAB)**
-> The matlab script "**eigvecmat_calc.m**" will generate a eigenvector matrix with the user-specified **k** number. **Input arguments** are:
->- **K**: The number of resultant module. Note that this number will be same as the number of eigenvectors. For example, if k=20, the eigenvector matrix (which is the result of the eigvecmat_cal.m script) will consist of gene vectors of 20 eigenvectors.
->- **output prefix**: the name of output prefix (usually the species name) eigenvector matrix file.
+> ```
+> USAGE: ./run_muscari.sh [K] [P] [X] [best] [output]
+> e.g.  ./run_muscari.sh 10 0.8 0.1 ath result_k10
+> ```
+
+**(optional) Step3-1. preparation of eigenvector matrices (MATLAB)**
+> This optional step is a **part of run_muscari.sh**. This step could be run automatically but we explain here what happens by this script.
+> The matlab script *eigvecmat_calc.m* will generate a eigenvector matrix with the user-specified *k* number. Input arguments are:
+>- *K*: The number of resultant module. Note that this number will be same as the number of eigenvectors. For example, if k=10, the eigenvector matrix (which is the result of the eigvecmat_cal.m script) will consist of gene vectors of 10 eigenvectors.
+>- *output prefix*: the name of output prefix (usually the species name) eigenvector matrix file.
 > ```
 > USAGE: matlab -r eigvecmat_calc\(\'[value_matrix]\',K,\'[output_prefix]\'\)
-> e.g.  matalb -r eigvecmat_calc\(\'sample_data/ath_sample_matrix.txt\',20,\'ath\'\)
+> e.g.  matalb -r eigvecmat_calc\(\'sample_data/ath_sample_matrix.txt\',10,\'ath\'\)
 > ```
-> The script will generate output files named: "**[output_prefix].eigvecs.matrix.txt**". Please also refer to the wrapper script about the usage.
+> The script will generate output files named: "*[output_prefix].eigvecs.matrix.txt*". Please also refer to the wrapper script about the usage.
 >```
-> matlab -r run_eigvecmat_calculation\(20\) (k=20 for example)
+> matlab -r run_eigvecmat_calculation\(10\) (k=10 for example)
 >```
 
 -------------------
