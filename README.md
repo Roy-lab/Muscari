@@ -53,7 +53,7 @@ You can also find the example files for each requirement at **sample_data** dire
 <br><br>
 
 * **Requirement 4: Value matrices (text files)** 
-> The expression value matrix for each extant node (species) should be prepared separately as a **tab delimited** text files. 
+> The expression value matrix for each species should be prepared separately as a **tab delimited** text files. 
 >- First row of the file should be header for the following columns.
 >- First column should be gene IDs, which would corresponds to the gene IDs used in orthogroup file (requirement 3).
 >- Values of this matrix would be normalized gene expression values.
@@ -67,3 +67,49 @@ You can also find the example files for each requirement at **sample_data** dire
 >```
 > Refer to this file: **sample_data/(species)_sample_matrix.txt**
 <br><br>
+
+-------------------
+### 2. RUNNING 
+-------------------
+**Step1. Preparation of eigenvector matrices (MATLAB)**
+> The matlab script "**eigvecmat_calc.m**" will generate a eigenvector matrix with the user-specified **k** number. **Input arguments** are:
+>- **K**: The number of resultant module. Note that this number will be same as the number of eigenvectors. For example, if k=20, the eigenvector matrix (which is the result of the eigvecmat_cal.m script) will consist of gene vectors of 20 eigenvectors.
+>- **output prefix**: the name of output prefix (usually the species name) eigenvector matrix file.
+> ```
+> USAGE: matlab -r eigvecmat_calc\(\'[value_matrix]\',K,\'[output_prefix]\'\)
+> e.g.  matalb -r eigvecmat_calc\(\'sample_data/ath_sample_matrix.txt\',20,\'ath\'\)
+> ```
+> The script will generate output files named: "**[output_prefix].eigvecs.matrix.txt**". Please also refer to the wrapper script about the usage.
+>```
+> matlab -r run_eigvecmat_calculation
+>```
+<br><br>
+
+**Step2. Preparation of config file (text file)**
+> Once the eigenvector matrices are ready, you need to write a simple text file for matching the species name to each eigenvector matrix and name it as "**config.txt**". This file will be used another input for the clustering while matching your eigenvector matrices and species names.
+> - This file consists of **2 columns with tab delmited**. 
+>```
+>ath (TAB) ath.eigvecs.matrix.txt
+>mtr (TAB) mtr.eigvecs.matrix.txt
+>osa (TAB) osa.eigvecs.matrix.txt
+>ppa (TAB) ppa.eigvecs.matrix.txt
+>stu (TAB) stu.eigvecs.matrix.txt
+>zma (TAB) zma.eigvecs.matrix.txt
+>```
+> Refer to this file: **sample_data/config.txt**
+<br><br>
+
+**Step3. Compling Muscari code**
+> Download the **code** directory and run make file:
+> ```
+> make
+> ```
+> If the compiling has successed
+
+
+
+<br><br>
+
+-------------------
+### 3. OUTPUT
+-------------------
