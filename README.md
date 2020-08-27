@@ -94,7 +94,7 @@ You can also find the example files for each requirement at **sample_data** dire
 
 **Step3. Running Muscari (shell)**
 > We are providing a wrapper shell script "**run_muscari.sh**", which is doing (1) eigenvector matrix calculation (MATLAB) and (2) running muscari clustering (C++).<br>
->> (Note: the script is adjusted to run Muscari with the sample data we are providing here at **sample_data** directory. Therefore, if you want to just use the run_muscari.sh, **please put your requirement files prepared by above into the sample_data directory first before running**.)<br><br>
+> (Note: the script is adjusted to run Muscari with the sample data we are providing here at **sample_data** directory. Therefore, if you want to just use the run_muscari.sh, **please put your requirement files prepared by above into the sample_data directory first before running**.)<br>
 > The run_muscari.sh script requires arguments below:
 >- 
 
