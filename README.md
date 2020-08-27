@@ -9,7 +9,6 @@
 -------------------
 Following is the list of files should be prepared for the running of Mucari. Please follow the description carefully. <br>
 You can also find the example files for each requirement at **sample_data** direcotry.
-<br><br>
 
 * **Requirement 1: Species tree (text file)** <br>
 > Species tree should be prepared as a text file consist of 3 columns (tab delimited). Each row is explaining the relationship of a parent node and a child node. *e.g.*, if species "**osa**" and "**zma**" are 2 children of ancestral node "**Anc5**", this relationship could be expressed as like below:
