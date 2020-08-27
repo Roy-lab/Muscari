@@ -109,7 +109,7 @@ You can also find the example files for each requirement at **sample_data** dire
 > ```
 
 **(optional) Step3-1. preparation of eigenvector matrices (MATLAB)**
-> This optional step is a **part of run_muscari.sh**. This step could be run automatically but we explain here what happens by this script.
+> This optional step is a **part of run_muscari.sh**. which could be **run automatically by run_muscari.sh** but demostrating here what happens by the script.<br>
 > The matlab script *eigvecmat_calc.m* will generate a eigenvector matrix with the user-specified *k* number. Input arguments are:
 >- *K*: The number of resultant module. Note that this number will be same as the number of eigenvectors. For example, if k=10, the eigenvector matrix (which is the result of the eigvecmat_cal.m script) will consist of gene vectors of 10 eigenvectors.
 >- *output prefix*: the name of output prefix (usually the species name) eigenvector matrix file.
@@ -121,6 +121,27 @@ You can also find the example files for each requirement at **sample_data** dire
 >```
 > matlab -r run_eigvecmat_calculation\(10\) (k=10 for example)
 >```
+
+**(optional) Step3-2. detailed parameter usage for muscari**
+> This running of muscari step is a **part of run_muscari.sh**. which could be **run automatically by run_muscari.sh** but demostrating here what are the parameters are.<br>
+> The argument keys of the program muscari are like below:
+>```
+>- **-s**: species order file name (requirement 2)
+>- **-e**: orthogroup ID (OGID) to gene ID file (requirement 3)
+>- **-k**: number of resultan modules
+>- **-t**: species tree file name (requirement 1)
+>- **-c**: config file name (made in step1)
+>- **-r**: species tree file name
+>- **-o**: output directory name
+>- **-m**: defines the mode in which the Arboretum algorithm is to be used; learn|generate|visualize|crossvalidate are the options, default=learn
+>- **-b**: most well-known studied species name
+>- **-i**: initialization method for transition probabilities for cluster membership across species; uniform|branchlength, default=uniform
+>- **-p**: transition proability value
+>- **-x**: fixed covariation value
+>- **-w**: an true|false option for writing over the results on the existing directory. default=true
+>- **-f**: an true|false option for running initial clustering generation. default=true
+>```
+<br><br>
 
 -------------------
 ### 3. OUTPUT
