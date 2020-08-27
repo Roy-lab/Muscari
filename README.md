@@ -122,7 +122,7 @@ You can also find the example files for each requirement at **sample_data** dire
 > matlab -r run_eigvecmat_calculation\(10\) (k=10 for example)
 >```
 
-**(optional) Step3-2. detailed parameter usage for muscari**
+**(optional) Step3-2. detailed parameters usages of the muscari**
 > This running of muscari step is a **part of run_muscari.sh**. which could be **run automatically by run_muscari.sh** but demostrating here what are the parameters are.<br>
 > The argument keys of the program muscari are like below:
 >```
@@ -144,5 +144,23 @@ You can also find the example files for each requirement at **sample_data** dire
 <br><br>
 
 -------------------
-### 3. OUTPUT
+### 3. OUTPUTS
 -------------------
+If the running of Muscari was successfully finished, you could find that bunch of result files are in the result directory you've specified.<br>
+The following result files are containing the most relevant information of the result of clustering:
+
+* **Output 1: [species]__speciesspecnames_clusterassign.txt (tab delimited)** 
+> These files contain the result of cluster assaignments with gene IDs, formatted as "gene ID (TAB) cluster ID".
+>```
+> ath_ARATH_speciesspecnames_clusterassign.txt
+> mtr_ARATH_speciesspecnames_clusterassign.txt
+> (...)
+>```
+
+* **Output 2: allspecies_clusterassign_lca_brk.txt (tab delimited)** 
+> This file contains the same cluster assignment result but it provides in a table, <br>
+> where the rows are orthogroup ID or gene ID of the "best" species which was specified by user<br>
+> and columns are all nodes in the species tree, i.e. all extant and acestral nodes.<br>
+> This file has specific aspects in the table:
+>- Meaning of the element values: each element vlaue of the table corresponds to the cluster assignment of each species (column) and ancestor. Negative values are exhibiting "missing" elements with reasoning, where "-1" means "missing of expression value" and "-2" means "missing of gene in the phylogeny (i.e. no ortholog gene in the gene tree)".
+>- Ordering of the table and the "Dummy" lines: the table is sorted by the cluster assignment of Ancestor1 (root ancestor of the tree; positioned at the last column of the table). Dummy lines are the separators of different cluster assignments between two group of Ancestor1 clusters.
