@@ -126,20 +126,20 @@ You can also find the example files for each requirement at **sample_data** dire
 > This running of muscari step is a **part of run_muscari.sh**. which could be **run automatically by run_muscari.sh** but demostrating here what are the parameters are.<br>
 > The argument keys of the program muscari are like below:
 >```
->- **-s**: species order file name (requirement 2)
->- **-e**: orthogroup ID (OGID) to gene ID file (requirement 3)
->- **-k**: number of resultan modules
->- **-t**: species tree file name (requirement 1)
->- **-c**: config file name (made in step1)
->- **-r**: species tree file name
->- **-o**: output directory name
->- **-m**: defines the mode in which the Arboretum algorithm is to be used; learn|generate|visualize|crossvalidate are the options, default=learn
->- **-b**: most well-known studied species name
->- **-i**: initialization method for transition probabilities for cluster membership across species; uniform|branchlength, default=uniform
->- **-p**: transition proability value
->- **-x**: fixed covariation value
->- **-w**: an true|false option for writing over the results on the existing directory. default=true
->- **-f**: an true|false option for running initial clustering generation. default=true
+>- -s: species order file name (requirement 2)
+>- -e: orthogroup ID (OGID) to gene ID file (requirement 3)
+>- -k: number of resultan modules
+>- -t: species tree file name (requirement 1)
+>- -c: config file name (made in step1)
+>- -r: species tree file name
+>- -o: output directory name
+>- -m: defines the mode in which the Arboretum algorithm is to be used; learn|generate|visualize|crossvalidate are the options, default=learn
+>- -b: most well-known studied species name
+>- -i: initialization method for transition probabilities for cluster membership across species; uniform|branchlength, default=uniform
+>- -p: transition proability value
+>- -x: fixed covariation value
+>- -w: an true|false option for writing over the results on the existing directory. default=true
+>- -f: an true|false option for running initial clustering generation. default=true
 >```
 <br><br>
 
