@@ -83,7 +83,6 @@ You can also find the example files for each requirement at **sample_data** dire
 >```
 > matlab -r run_eigvecmat_calculation
 >```
-<br><br>
 
 **Step2. Preparation of config file (text file)**
 > Once the eigenvector matrices are ready, you need to write a simple text file for matching the species name to each eigenvector matrix and name it as "**config.txt**". This file will be used another input for the clustering while matching your eigenvector matrices and species names.
