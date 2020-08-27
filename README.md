@@ -48,6 +48,7 @@ You can also find the example files for each requirement at **sample_data** dire
 > OG474_2 (TAB) PP1S63_51V6,NONE,NONE,PGSC0003DMG400019342,MTR_2g099990,AT5G60470
 > OG474_3 (TAB) NONE,Os01g0242200,Zm00001d009030,PGSC0003DMG400024700,MTR_8g017210,AT5G66730
 > OG474_4 (TAB) NONE,NONE,Zm00001d039254,PGSC0003DMG400003372,MTR_4g059870,AT5G44160
+> (...)
 > ```
 > Refer to this file: **sample_data/sample_OGID.txt**
 <br><br>
@@ -58,11 +59,12 @@ You can also find the example files for each requirement at **sample_data** dire
 >- First column should be gene IDs, which would corresponds to the gene IDs used in orthogroup file (requirement 3).
 >- Values of this matrix would be normalized gene expression values.
 >```
-> Gene     SRX1795751	SRX1796285	SRX2035609	SRX2189162	SRX2484777 (...)
+> Gene         SRX1795751	SRX1796285	SRX2035609	SRX2189162	SRX2484777 (...)
 > AT1G01900	-0.031721	0.031721	-0.570001	0.238822	-0.130085 (...)
-> AT1G01940  0.071255	-0.071255	-0.090784	-0.39764	-0.166357 (...)
+> AT1G01940      0.071255	-0.071255	-0.090784	-0.39764	-0.166357 (...)
 > AT1G02180	-0.029421	0.029421	1.111816	-0.420548	-0.351622 (...)
 > AT1G03100	-0.017806	0.017806	0.062057	0.338907	-0.028584 (...)
+> (...)
 >```
 > Refer to this file: **sample_data/(species)_sample_matrix.txt**
 <br><br>
