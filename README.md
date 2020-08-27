@@ -71,22 +71,10 @@ You can also find the example files for each requirement at **sample_data** dire
 -------------------
 ### 2. RUNNING 
 -------------------
-**Step1. Preparation of eigenvector matrices (MATLAB)**
-> The matlab script "**eigvecmat_calc.m**" will generate a eigenvector matrix with the user-specified **k** number. **Input arguments** are:
->- **K**: The number of resultant module. Note that this number will be same as the number of eigenvectors. For example, if k=20, the eigenvector matrix (which is the result of the eigvecmat_cal.m script) will consist of gene vectors of 20 eigenvectors.
->- **output prefix**: the name of output prefix (usually the species name) eigenvector matrix file.
-> ```
-> USAGE: matlab -r eigvecmat_calc\(\'[value_matrix]\',K,\'[output_prefix]\'\)
-> e.g.  matalb -r eigvecmat_calc\(\'sample_data/ath_sample_matrix.txt\',20,\'ath\'\)
-> ```
-> The script will generate output files named: "**[output_prefix].eigvecs.matrix.txt**". Please also refer to the wrapper script about the usage.
->```
-> matlab -r run_eigvecmat_calculation
->```
-
-**Step2. Preparation of config file (text file)**
-> Once the eigenvector matrices are ready, you need to write a simple text file for matching the species name to each eigenvector matrix and name it as "**config.txt**". This file will be used another input for the clustering while the code is matching your eigenvector matrices to each species name.
-> - This file consists of **2 columns with tab delmited**. 
+**Step1. Preparation of config file (text file)**
+> You need to write a simple text file for matching the species name to each eigenvector matrix and name it as "**config.txt**". This file will be used another input for the clustering while the code is matching your eigenvector matrices to each species name.
+>- Eigenvector matrices will be named as "**[species_name].eigvecs.matrix.txt**" by default in our wrapper script at Step3.
+>- This file consists of **2 columns with tab delmited**,as **[species_name] (TAB) [species_name.eigvecs.matrix.txt]**
 >```
 >ath (TAB) ath.eigvecs.matrix.txt
 >mtr (TAB) mtr.eigvecs.matrix.txt
@@ -97,16 +85,32 @@ You can also find the example files for each requirement at **sample_data** dire
 >```
 > Refer to this file: **sample_data/config.txt**
 
-**Step3. Compling Muscari code**
-> Download the **code** directory and run make file:
+**Step2. Compling Muscari code**
+> Run make file in the **code** directory:
 > ```
 > make
 > ```
-> If the compiling has successed
+> If the compiling was successful, you should be able to find the program named "**muscari**" in the **code** directory.
 
+**Step3. Running Muscari (shell)**
+> We are providing a wrapper shell script "**run_muscari.sh**", which is doing (1) eigenvector matrix calculation (MATLAB) and (2) running muscari clustering (C++).<br>
+>> (Note: the script is adjusted to run Muscari with the sample data we are providing here at **sample_data** directory. Therefore, if you want to just use the run_muscari.sh, **please put your requirement files prepared by above into the sample_data directory first before running**.)<br><br>
+> The run_muscari.sh script requires arguments below:
+>- 
 
-
-<br><br>
+ 
+**Step1. Preparation of eigenvector matrices (MATLAB)**
+> The matlab script "**eigvecmat_calc.m**" will generate a eigenvector matrix with the user-specified **k** number. **Input arguments** are:
+>- **K**: The number of resultant module. Note that this number will be same as the number of eigenvectors. For example, if k=20, the eigenvector matrix (which is the result of the eigvecmat_cal.m script) will consist of gene vectors of 20 eigenvectors.
+>- **output prefix**: the name of output prefix (usually the species name) eigenvector matrix file.
+> ```
+> USAGE: matlab -r eigvecmat_calc\(\'[value_matrix]\',K,\'[output_prefix]\'\)
+> e.g.  matalb -r eigvecmat_calc\(\'sample_data/ath_sample_matrix.txt\',20,\'ath\'\)
+> ```
+> The script will generate output files named: "**[output_prefix].eigvecs.matrix.txt**". Please also refer to the wrapper script about the usage.
+>```
+> matlab -r run_eigvecmat_calculation\(20\) (k=20 for example)
+>```
 
 -------------------
 ### 3. OUTPUT
