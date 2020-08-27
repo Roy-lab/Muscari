@@ -98,9 +98,9 @@ You can also find the example files for each requirement at **sample_data** dire
 >> Therefore, if you want to just use the run_muscari.sh, **please put your requirement files prepared by above into the sample_data directory** first before running.
 
 > The run_muscari.sh script requires arguments below:
->- **k**: The number of resultant modules
->- **p**: transition probability (starting default = 0.8)
->- **x**: fixed covariance value (starting default = 0.1)
+>- **K**: The number of resultant modules
+>- **P**: transition probability (starting default = 0.8)
+>- **X**: fixed covariance value (starting default = 0.1)
 >- **best species**: One of the species name which is most well-studied. The gene ID of this species will be represented instead of OGID if there is the gene in that orthogroup.
 >- **output dir name**: The name of the directory which the results will be in
  
