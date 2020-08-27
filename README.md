@@ -92,14 +92,20 @@ You can also find the example files for each requirement at **sample_data** dire
 > ```
 > If the compiling was successful, you should be able to find the program named "**muscari**" in the **code** directory.
 
-**Step3. Running Muscari (shell)**
-> We are providing a wrapper shell script "**run_muscari.sh**", which is doing (1) eigenvector matrix calculation (MATLAB) and (2) running muscari clustering (C++).<br>
-> (Note: the script is adjusted to run Muscari with the sample data we are providing here at **sample_data** directory. Therefore, if you want to just use the run_muscari.sh, **please put your requirement files prepared by above into the sample_data directory first before running**.)<br>
-> The run_muscari.sh script requires arguments below:
->- 
+**Step3. Running Muscari (shell script)**
+> We are providing a wrapper shell script **run_muscari.sh**, which is doing (a) eigenvector matrix calculation (MATLAB) and (b) running muscari clustering (C++).
+>> Note that the script is adjusted to run Muscari with the sample data we are providing here at **sample_data** directory. 
+>> Therefore, if you want to just use the run_muscari.sh, **please put your requirement files prepared by above into the sample_data directory** first before running.
 
+> The run_muscari.sh script requires arguments below:
+>- k: 
+>- p:
+>- x:
+>- best species:
+>- output dir name:
  
-**Step1. Preparation of eigenvector matrices (MATLAB)**
+ 
+**Step3-1. Preparation of eigenvector matrices (MATLAB)**
 > The matlab script "**eigvecmat_calc.m**" will generate a eigenvector matrix with the user-specified **k** number. **Input arguments** are:
 >- **K**: The number of resultant module. Note that this number will be same as the number of eigenvectors. For example, if k=20, the eigenvector matrix (which is the result of the eigvecmat_cal.m script) will consist of gene vectors of 20 eigenvectors.
 >- **output prefix**: the name of output prefix (usually the species name) eigenvector matrix file.
