@@ -85,7 +85,7 @@ You can also find the example files for each requirement at **sample_data** dire
 >```
 
 **Step2. Preparation of config file (text file)**
-> Once the eigenvector matrices are ready, you need to write a simple text file for matching the species name to each eigenvector matrix and name it as "**config.txt**". This file will be used another input for the clustering while matching your eigenvector matrices and species names.
+> Once the eigenvector matrices are ready, you need to write a simple text file for matching the species name to each eigenvector matrix and name it as "**config.txt**". This file will be used another input for the clustering while the code is matching your eigenvector matrices to each species name.
 > - This file consists of **2 columns with tab delmited**. 
 >```
 >ath (TAB) ath.eigvecs.matrix.txt
@@ -96,7 +96,6 @@ You can also find the example files for each requirement at **sample_data** dire
 >zma (TAB) zma.eigvecs.matrix.txt
 >```
 > Refer to this file: **sample_data/config.txt**
-<br><br>
 
 **Step3. Compling Muscari code**
 > Download the **code** directory and run make file:
