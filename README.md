@@ -10,7 +10,7 @@
 Following is the list of files should be prepared for the running of Mucari. Please follow the description carefully. <br>
 You can also find the example files for each requirement at **sample_data** direcotry.
 
-* **Requirement 1: Species tree (text file)** <br>
+* **Requirement 1: Species tree (text file)** 
 > Species tree should be prepared as a text file consist of 3 columns (tab delimited). Each row is explaining the relationship of a parent node and a child node. *e.g.*, if species "**osa**" and "**zma**" are 2 children of ancestral node "**Anc5**", this relationship could be expressed as like below:
 > ```
 > osa (TAB) left (TAB) Anc5
@@ -24,7 +24,7 @@ You can also find the example files for each requirement at **sample_data** dire
 > Refer to this file: **sample_data/SpeciesTree.txt**
 <br><br>
 
-* **Requirement 2: Species order file (text file)** <br>
+* **Requirement 2: Species order file (text file)** 
 > A simple list of extant nodes of the Species tree (requirement 1), without ancestral nodes (no "AncXX"). 1 column with only node (species) names. *e.g.*
 > ```
 > ppa
@@ -37,7 +37,7 @@ You can also find the example files for each requirement at **sample_data** dire
 > Refer to this file: **sample_data/SpeciesOrder.txt**
 <br><br>
 
-* **Requirement 3: orthogroup file (text file)** <br>
+* **Requirement 3: orthogroup file (text file)**
 > A list of orthogroups(OGs) with a profiled list of corresponding gene IDs per species. This OG relationship of genes could be leant by orthogroup and gene tree learning.
 >- The format of this file is: " **OGID (TAB) GeneID,GeneID,GeneID,...** " <br>(tab delimited between OGID and gene IDs, comma delimited among genes)
 >- **The order of gene IDs should be same to the Species order file (requirement 2).**
