@@ -40,10 +40,10 @@ You can also find the example files for each requirement at **sample_data** dire
 
 * **Requirement 3: orthogroup file (text file)** <br>
 > A list of orthogroups(OGs) with a profiled list of corresponding gene IDs per species. This OG relationship of genes could be leant by orthogroup and gene tree learning.
->>- The format of this file is: " **OGID (TAB) GeneID,GeneID,GeneID,...** " <br>(tab delimited between OGID and gene IDs, comma delimited among genes)
->>- **The order of gene IDs should be same to the Species order file (requirement 2).**
->>- Duplicated OGs are designated as "number". (such as OG223_**1**, OG223_**2**)
->>- Write "**NONE**" if there's no species gene ID assigned to the OG.
+>- The format of this file is: " **OGID (TAB) GeneID,GeneID,GeneID,...** " <br>(tab delimited between OGID and gene IDs, comma delimited among genes)
+>- **The order of gene IDs should be same to the Species order file (requirement 2).**
+>- Duplicated OGs are designated as "number". (such as OG223_**1**, OG223_**2**)
+>- Write "**NONE**" if there's no species gene ID assigned to the OG.
 > ```
 > OG474_1	PP1S125_69V6,NONE,NONE,NONE,NONE,AT3G13810
 > OG474_2	PP1S63_51V6,NONE,NONE,PGSC0003DMG400019342,MTR_2g099990,AT5G60470
