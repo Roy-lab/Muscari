@@ -17,6 +17,7 @@ Muscari is a new multi-task graph-based clustering algorithm developed for the i
 ### RUNNING MUSCARI
 -------------------
 **1. Preparation of input requirement files**
+
 Following is the list of files should be prepared for the running of Mucari. Please follow the description carefully. <br>
 You can also find the example files for each requirement at **sample_data** direcotry.
 
