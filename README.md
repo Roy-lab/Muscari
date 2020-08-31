@@ -3,8 +3,20 @@
 Muscari is a new multi-task graph-based clustering algorithm developed for the identification of gene co-expression modules (or subnetworks) jointly across species from species-specific genome-wide co-expression networks by using both the phylogenetic relationship between species and the graph-based nature of co-expression matrices. Muscari is based on the Arboretum-HiC ([https://doi.org/10.1186/s13059-016-0962-8](https://doi.org/10.1186/s13059-016-0962-8)) multi-task graph clustering algorithm, which defines each task as a spectral graph clustering problem, one for each species, and the the multi-task learning framework simultaneously searches for groups of genes that are interacting in multiple species while accounting for the phylogenetic relationship between species. Unlike Arboretum-HiC, Muscari inputs are gene expression matrices, which are converted into fully-connected weighted gene co-expression networks. <br><br>
 
 -------------------
-### 1. REQUIREMENTS
+### INSTALLATION
 -------------------
+**Step2. Compling Muscari code**
+> Run make file in the **code** directory:
+> ```
+> make
+> ```
+> If the compiling was successful, you should be able to find the program named "**muscari**" in the **code** directory.
+
+
+-------------------
+### RUNNING MUSCARI
+-------------------
+**1. Preparation of input requirement files**
 Following is the list of files should be prepared for the running of Mucari. Please follow the description carefully. <br>
 You can also find the example files for each requirement at **sample_data** direcotry.
 
@@ -67,10 +79,7 @@ You can also find the example files for each requirement at **sample_data** dire
 > Refer to this file: **sample_data/(species)_sample_matrix.txt**
 <br><br>
 
--------------------
-### 2. RUNNING 
--------------------
-**Step1. Preparation of config file (text file)**
+* **Requirement 5: Preparation of config file (text file)** 
 > You need to write a simple text file for matching the species name to each eigenvector matrix and name it as "**config.txt**". This file will be used another input for the clustering while the code is matching your eigenvector matrices to each species name.
 >- Eigenvector matrices will be named as "**[species_name].eigvecs.matrix.txt**" by default in our wrapper script at Step3.
 >- This file consists of **2 columns with tab delmited**,as **[species_name] (TAB) [species_name.eigvecs.matrix.txt]**
@@ -83,15 +92,10 @@ You can also find the example files for each requirement at **sample_data** dire
 >zma (TAB) zma.eigvecs.matrix.txt
 >```
 > Refer to this file: **sample_data/config.txt**
+<br><br>
 
-**Step2. Compling Muscari code**
-> Run make file in the **code** directory:
-> ```
-> make
-> ```
-> If the compiling was successful, you should be able to find the program named "**muscari**" in the **code** directory.
 
-**Step3. Running Muscari (shell script)**
+**2. Running Muscari (shell script)**
 > We are providing a wrapper shell script **run_muscari.sh**, which is doing (a) eigenvector matrix calculation (MATLAB) and (b) running muscari clustering (C++).
 >> Note that the script is adjusted to run Muscari with the sample data we are providing here at **sample_data** directory. 
 >> Therefore, if you want to just use the run_muscari.sh, **please put your requirement files prepared by above into the sample_data directory** first before running.
@@ -107,7 +111,7 @@ You can also find the example files for each requirement at **sample_data** dire
 > e.g.  ./run_muscari.sh 10 0.8 0.1 ath result_k10
 > ```
 
-**(optional) Step3-1. preparation of eigenvector matrices (MATLAB)**
+**(optional) 2-1. preparation of eigenvector matrices (MATLAB)**
 > This optional step is a **part of run_muscari.sh**. which could be **run automatically by run_muscari.sh** but demostrating here what happens by the script.<br>
 > The matlab script *eigvecmat_calc.m* will generate a eigenvector matrix with the user-specified *k* number. Input arguments are:
 >- *K*: The number of resultant module. Note that this number will be same as the number of eigenvectors. For example, if k=10, the eigenvector matrix (which is the result of the eigvecmat_cal.m script) will consist of gene vectors of 10 eigenvectors.
@@ -121,7 +125,7 @@ You can also find the example files for each requirement at **sample_data** dire
 > matlab -r run_eigvecmat_calculation\(10\) (k=10 for example)
 >```
 
-**(optional) Step3-2. detailed parameters usages of the muscari**
+**(optional) 2-2. detailed parameters usages of the muscari**
 > This running of muscari step is a **part of run_muscari.sh**. which could be **run automatically by run_muscari.sh** but demostrating here what are the parameters are.<br>
 > The argument keys of the program muscari are like below:
 >```
@@ -142,9 +146,8 @@ You can also find the example files for each requirement at **sample_data** dire
 >```
 <br><br>
 
--------------------
-### 3. OUTPUTS
--------------------
+
+**3. Outputs**
 If the running of Muscari was successfully finished, you could find that bunch of result files are in the result directory you've specified.<br>
 The following result files are containing the most relevant information of the result of clustering:
 
