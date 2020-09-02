@@ -43,7 +43,6 @@ You can also find the example files for each requirement at **sample_data** dire
 > Anc4 (TAB) right (TAB) Anc3
 > ```
 > Refer to this file: **sample_data/SpeciesTree.txt** 
-<br>
 
 * **Requirement 2: Species order file (text file)** 
 > A simple list of extant nodes of the Species tree (requirement 1), without ancestral nodes (no "AncXX"). 1 column with only node (species) names. *e.g.*
@@ -56,7 +55,6 @@ You can also find the example files for each requirement at **sample_data** dire
 > ath
 > ```
 > Refer to this file: **sample_data/SpeciesOrder.txt**
-<br>
 
 * **Requirement 3: orthogroup file (text file)**
 > A list of orthogroups(OGs) with a profiled list of corresponding gene IDs per species. This OG relationship of genes could be leant by orthogroup and gene tree learning.
@@ -72,7 +70,6 @@ You can also find the example files for each requirement at **sample_data** dire
 > (...)
 > ```
 > Refer to this file: **sample_data/sample_OGID.txt**
-<br>
 
 * **Requirement 4: Value matrices (text files)** 
 > The expression value matrix for each species should be prepared separately as a **tab delimited** text files. 
@@ -88,7 +85,6 @@ You can also find the example files for each requirement at **sample_data** dire
 > (...)
 >```
 > Refer to this file: **sample_data/(species)_sample_matrix.txt**
-<br>
 
 * **Requirement 5: Preparation of config file (text file)** 
 > You need to write a simple text file for matching the species name to each eigenvector matrix and name it as "**config.txt**". This file will be used another input for the clustering while the code is matching your eigenvector matrices to each species name.
