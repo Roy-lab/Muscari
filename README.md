@@ -8,7 +8,7 @@ Muscari is a new multi-task graph-based clustering algorithm developed for the i
 ### INSTALLATION
 -------------------
 **1. Required environment**
-> * matlab
+ * matlab: required only for generation of eigenvector matrices
 
 **2. Download the code**
  * **code/**: Muscari codes directory
