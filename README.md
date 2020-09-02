@@ -22,9 +22,8 @@ Muscari is a new multi-task graph-based clustering algorithm developed for the i
 > make
 > ```
 > If the compiling was successful, you should be able to find the program named "**muscari**" in the **code** directory.
+-------------------
 <br>
-<br>
-
 
 -------------------
 ### RUNNING MUSCARI
@@ -180,3 +179,4 @@ The following result files are containing the most relevant information of the r
 > This file has specific aspects in the table:
 >- Meaning of the element values: each element vlaue of the table corresponds to the cluster assignment of each species (column) and ancestor. Negative values are exhibiting "missing" elements with reasoning, where "-1" means "missing of expression value" and "-2" means "missing of gene in the phylogeny (i.e. no ortholog gene in the gene tree)".
 >- Ordering of the table and the "Dummy" lines: the table is sorted by the cluster assignment of Ancestor1 (root ancestor of the tree; positioned at the last column of the table). Dummy lines are the separators of different cluster assignments between two group of Ancestor1 clusters.
+-------------------
