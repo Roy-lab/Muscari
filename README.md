@@ -22,9 +22,8 @@ Muscari is a new multi-task graph-based clustering algorithm developed for the i
 > make
 > ```
 > If the compiling was successful, you should be able to find the program named "**muscari**" in the **code** directory.<br>
-&nbsp;
-&nbsp;
-
+<p><br></p>
+<p><br></p>
 
 -------------------
 ### RUNNING MUSCARI
