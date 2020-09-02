@@ -20,8 +20,8 @@ Muscari is a new multi-task graph-based clustering algorithm developed for the i
 > make
 > ```
 > If the compiling was successful, you should be able to find the program named "**muscari**" in the **code** directory.
-<br><br><br>
-
+<br>
+<br>
 
 -------------------
 ### RUNNING MUSCARI
@@ -42,8 +42,9 @@ You can also find the example files for each requirement at **sample_data** dire
 > stu (TAB) left (TAB) Anc3
 > Anc4 (TAB) right (TAB) Anc3
 > ```
-> Refer to this file: **sample_data/SpeciesTree.txt** <br><br>
-
+> Refer to this file: **sample_data/SpeciesTree.txt** 
+<br>
+<br>
 * **Requirement 2: Species order file (text file)** 
 > A simple list of extant nodes of the Species tree (requirement 1), without ancestral nodes (no "AncXX"). 1 column with only node (species) names. *e.g.*
 > ```
