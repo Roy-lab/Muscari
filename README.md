@@ -9,12 +9,11 @@ Muscari is a new multi-task graph-based clustering algorithm developed for the i
 > * matlab
 
 **2. Download the code**
-> * code/ : Muscari codes directory
-> * run_muscari.sh : Wrapper running script for muscari. This script requires 2 other subsequent scripts:
->```
-> eigvecmat_calc.m : eigenvector matrix calculation script
-> run_eigvecmat_calculation.m : wrapper script for running eigvecmat_calc.m
->```
+ * **code/**: Muscari codes directory
+ * **run_muscari.sh**: Wrapper running script for muscari. This script requires 2 other subsequent scripts:
+>- eigvecmat_calc.m: eigenvector matrix calculation script
+>- run_eigvecmat_calculation.m: wrapper script for running eigvecmat_calc.m
+
 
 **3. Compling Muscari code**
 > Run **code/Makefile** :
