@@ -14,14 +14,14 @@ Muscari is a new multi-task graph-based clustering algorithm developed for the i
 >- eigvecmat_calc.m: eigenvector matrix calculation script
 >- run_eigvecmat_calculation.m: wrapper script for running eigvecmat_calc.m
 
-
 **3. Compling Muscari code**
 > Run **code/Makefile** :
 > ```
 > make
 > ```
 > If the compiling was successful, you should be able to find the program named "**muscari**" in the **code** directory.
- <br><br>
+<br><br><br>
+
 
 -------------------
 ### RUNNING MUSCARI
@@ -42,8 +42,7 @@ You can also find the example files for each requirement at **sample_data** dire
 > stu (TAB) left (TAB) Anc3
 > Anc4 (TAB) right (TAB) Anc3
 > ```
-> Refer to this file: **sample_data/SpeciesTree.txt**
-<br><br>
+> Refer to this file: **sample_data/SpeciesTree.txt** <br><br>
 
 * **Requirement 2: Species order file (text file)** 
 > A simple list of extant nodes of the Species tree (requirement 1), without ancestral nodes (no "AncXX"). 1 column with only node (species) names. *e.g.*
@@ -156,7 +155,6 @@ You can also find the example files for each requirement at **sample_data** dire
 >- -f: an true|false option for running initial clustering generation. default=true
 >```
 <br><br>
-
 
 **3. Outputs**
 If the running of Muscari was successfully finished, you could find that bunch of result files are in the result directory you've specified.<br>
