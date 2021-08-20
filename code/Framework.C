@@ -2918,16 +2918,18 @@ main(int argc, char *argv[])
 		fw.setPreClustering(true);
 		char mergedFile[1024];
 		sprintf(mergedFile,"%s/mergedData.txt",outputDir);
-		fw.readExpressionData(confFName,mergedFile);
+		//fw.readExpressionData(confFName,mergedFile);		// source spc only
 		char outsuffix[1024];
 		sprintf(outsuffix,"%s/mergedData",outputDir);
-		fw.fgconverter(mergedFile,outsuffix,1,1);
+		//fw.fgconverter(mergedFile,outsuffix,1,1);		// source spc only
+		fw.fgconverter(mergedFileNonSource,outsuffix,1,1);
 		char clusteringOutputDir[1024];
 		sprintf(clusteringOutputDir,"%s/mergedClustering",outputDir);
 		fw.learnMoE(outsuffix,clusteringOutputDir,kClusters);
 		char clusterFile[1024];
                 sprintf(clusterFile,"%s/mergedClustering/fold0/clusterassign.txt",outputDir);
-		fw.genSpeciesClusters(clusterFile,outputDir);
+		//fw.genSpeciesClusters(clusterFile,outputDir);		// source spc only
+		fw.genSpeciesClustersNonSrc(clusterFile,outputDir);
 	}
 	if(strcmp(mode,"prediction")==0)
 	{
