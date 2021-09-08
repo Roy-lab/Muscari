@@ -20,6 +20,7 @@ Arboretum: An algorithm to cluster functional genomesomics data from multiple sp
 #include <string.h>
 #include <fstream>
 #include <gsl/gsl_randist.h>
+#include <unistd.h>	// getpid issue
 #include "SpeciesDistManager.H"
 #include "GeneTree.H"
 #include "GeneTreeManager.H"
