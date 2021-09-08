@@ -22,6 +22,7 @@ Arboretum: An algorithm to cluster functional genomesomics data from multiple sp
 #include <stdlib.h>	// repop
 #include <cstring>	// repop
 #include <math.h>
+#include <unistd.h>	// getpid issue
 #include "GeneMap.H"
 #include "MappedOrthogroup.H"
 #include "MappedOrthogroupReader.H"
