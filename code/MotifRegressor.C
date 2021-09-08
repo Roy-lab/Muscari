@@ -3,6 +3,7 @@
 #include <sys/time.h>
 #include <time.h>
 #include <string.h>
+#include <unistd.h>	// getpid issue
 #include "Variable.H"
 #include "Error.H"
 #include "VariableManager.H"
